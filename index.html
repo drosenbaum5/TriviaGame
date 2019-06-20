@@ -13,33 +13,39 @@
 <body>
 
 
-<!--container for the game title button and timer display-->
+<!--Container for the game title button and timer display-->
 <section id= "title-container">
  <div class = "container" id="game-title">
   <button id ="title-button"><h2 id="title-header">Battlestar Galactica: Trivia</h2></button>
  <div class = "d-flex justify-content-center">
-  <h3 id = "timer"></h3> 
+  <h1 id = "timer"></h1> 
  </div>
 </div>
 <br>
-
 </section>
     
 
-<!--Section Question box-->    
-<section>
+<!--Answer box-->    
+<section class = "question-section">
  <div class = "container" id="answer-box">    
   <ul>
+     <div class = "row">
+         <h2 class = "text-align questions" id ="questions"></h2>
+         <br>
+         <br>
+     </div> 
+  </ul>   
+  <ul>
     <div class = "row">
-     <button> <h3 id="answer-one">Answer 1 placeholder</h3></button>
+     <button> <h3 id="answer-one"></h3></button>
     </div>
     <div class = "row">
-     <button> <h3 id="answer-two">Answer 2 placeholder</h3></button>
+     <button> <h3 id="answer-two"></h3></button>
     </div>
     <div class = "row"> 
-     <button> <h3 id="answer-three">Answer 3 placeholder</h3></button>
+     <button> <h3 id="answer-three"></h3></button>
     </div>
-    <button> <h3 id="answer-four">Answer 4 placeholder</h3></button>
+    <button> <h3 id="answer-four"></h3></button>
  </ul>
 </div>
 </section>
