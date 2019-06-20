@@ -1,0 +1,60 @@
+body {
+
+background: url(../images/classic-background.jpg);
+overflow: hidden;
+
+}
+
+.section {
+
+
+    border: 20px;
+    border-color: black;
+    margin:auto;
+    background: black;
+
+
+}
+
+#game-title {
+
+    border: solid 10px;
+    border-color: black;
+    margin: auto;
+    margin-top: 200px;
+    background: gray;
+    opacity: .7;
+    padding: auto;
+    text-align: center;
+    height: 200px;
+    border-radius: 10px;
+    text-shadow: 2px;
+}
+
+
+
+
+#question-box {
+
+    border: solid 10px;
+    border-color: black;
+    margin: auto;
+    background: gray;
+    opacity: .8;
+    padding: auto;
+    text-align: center;
+    height: 400px;
+    border-radius: 10px;
+    text-shadow: 2px;
+    
+    
+    
+    }
+
+    button {
+
+        opacity: .7px;
+
+    }
+
+    #title-button
