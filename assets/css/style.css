@@ -26,7 +26,7 @@ overflow: hidden;
 
 
 
-#question-box {
+#answer-box {
 
     border: solid 10px;
     border-color: black;
@@ -35,7 +35,7 @@ overflow: hidden;
     opacity: .7;
     padding: auto;
     text-align: center;
-    height: 400px;
+    height: 450px;
     border-radius: 10px;
     text-shadow: 2px;
     background-image: url(../images/cast-background.jpg);
@@ -53,6 +53,7 @@ overflow: hidden;
         text-shadow: 2px;
         margin: auto;
         margin-top: 40px;
+        color: solid black;
         
 
     }
@@ -64,9 +65,11 @@ overflow: hidden;
     }
 
     #timer {
-        background: #737373;
-        float:left;
-        border:10px;
-        text-shadow: 2px;
-       
+        color: white;
+        text-align: center;
+        height: 35px;
+        border:50px;
+        border-color: solid gray;
+        border-radius: 5px;
+        margin-top: 10px;
     }
