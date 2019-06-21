@@ -12,7 +12,7 @@ overflow: hidden;
     border: solid 10px;
     border-color: black;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 425px;
     background: gray;
     opacity: .7;
     padding: auto;
@@ -40,7 +40,7 @@ overflow: hidden;
     border-radius: 10px;
     text-shadow: 2px;
     background-image: url(../images/cast-background.jpg);
-    /* display: none; */
+    display: none;
     
     
     
@@ -55,10 +55,10 @@ overflow: hidden;
         margin: auto;
         margin-top: 40px;
         color: solid black;
+        width: 400px;
         
-        
+        }
 
-    }
 
     h1 {
         background:#737373;
@@ -101,4 +101,9 @@ overflow: hidden;
         margin-top: 20px;
     }
     
+
+    #question-box {
+
+        width: 300px;
+    }
  

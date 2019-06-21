@@ -3,12 +3,13 @@ var incorrectGuesses;
 var timer = 34;
 var interval_Id;
 var round = 0;
+
 // var questionOne = "<u><h1>Who attempted to assassinate Commander Adama?</h1></u>";
 // var answers = ["Lee Adama", "Caprica Six", "Sharon", "Colonel Tigh"]
 
 var questionSet = [{
 
-   question1: "Who attempted to assassinate Commander Adama?",
+   question1: "Who attempted to assassinate Commander William Adama?",
    choices: ["Lee Adama", "Caprica Six", "Sharon", "Colonel Tigh"],
    answer: 2,
 }, 
@@ -34,17 +35,18 @@ var questionSet = [{
  
 
 
-console.log(questionSet);
+
 
 
 
 
 //Start the timer when the title button is clicked
     $(document).ready(function(){
-          $("#title-button").click(function() {
-          $("#title-button").replaceWith("<h1>" + questionSet[0].question1 + "</h1>");  
-            
           
+          $("#title-button").click(function() {
+          $("#title-button").replaceWith("<h1>" + questionSet[0].question1 + "</h1>");   
+          $("#answer-box").show();
+          marginTop()
           timerStart();
           callNewQuestions();
           
@@ -53,6 +55,12 @@ console.log(questionSet);
     
 
  
+
+function marginTop() {
+   document.getElementById("game-title").style.marginTop = "150px";
+ }
+   
+
 //Sets interval for timer to count back by 1 second
 function timerStart() {
 
@@ -80,12 +88,11 @@ function stop() {
 //main function for calling new question and answers
  function callNewQuestions () {
  
-      
-           
-            callNewAnswer1();
-            callNewAnswer2();
-            callNewAnswer3();
-            callNewAnswer4();l
+      //calls four nested functions upon CallNewQuestions() function call
+      callNewAnswer1();
+      callNewAnswer2();
+      callNewAnswer3();
+      callNewAnswer4();l
 
   
      //inserts answer 1
@@ -106,7 +113,7 @@ function stop() {
       //inserts answer 4
    function callNewAnswer4 () {
 
-      $("#answer-four").replaceWith("<h3>" + questionSet[0].choices[1]  + "</h3>") 
+      $("#answer-four").replaceWith("<h3>" + questionSet[0].choices[3]  + "</h3>") 
    }
 
    
