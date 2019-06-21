@@ -50,6 +50,7 @@ gameStart()
           marginTop()
           timerStart();
           callNewQuestions();
+          answerButtonPresses();
           
           });
       });
@@ -102,7 +103,7 @@ function stop() {
       callNewAnswer4();
 
   
-     //inserts answer 1
+     //inserts answer 1 based on global var round value
    function callNewAnswer1 () {
       if(round === 1) {
        $("#answer-one").replaceWith("<h3>" + questionSet[0].choices[0] + "</h3>") 
@@ -119,7 +120,7 @@ function stop() {
 
        }
    }
-      //inserts answer 2
+      //inserts answer 2 based on global var round value
    function callNewAnswer2 () {
       if(round === 1) {
        $("#answer-two").replaceWith("<h3>" + questionSet[0].choices[1] + "</h3>") 
@@ -134,7 +135,7 @@ function stop() {
           $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[1] + "</h3>")
       }
    }
-       //inserts answer 3
+       //inserts answer 3 based on global var round value
    function callNewAnswer3 () {
       if(round === 1) {
        $("#answer-three").replaceWith("<h3>" + questionSet[0].choices[2]  + "</h3>") 
@@ -149,7 +150,7 @@ function stop() {
           $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[2] + "</h3>")
       }
    }
-      //inserts answer 4
+      //inserts answer 4 based on global var round value
    function callNewAnswer4 () {
       if(round === 1) {
        $("#answer-four").replaceWith("<h3>" + questionSet[0].choices[3]  + "</h3>") 
@@ -165,3 +166,59 @@ function stop() {
       }
    }
  }
+
+
+
+ //Mother function for answer button presses
+ function answerButtonPresses() {
+    
+    answerButton1()
+    answerButton2()
+    answerButton3()
+    answerButton4()
+
+
+   
+ 
+   function answerButton1 () {
+  
+      
+  document.getElementById('question-button1').onclick = function () {
+    
+   stop()
+   alert("button pressed");  
+
+  }
+}
+
+function answerButton2 () {
+
+   document.getElementById('question-button2').onclick = function () {
+    
+   stop() 
+    alert("button pressed");  
+ 
+   }
+ }
+
+ function answerButton3 () {
+
+   document.getElementById('question-button3').onclick = function () {
+     
+   stop() 
+    alert("button pressed");  
+ 
+   }
+ }
+
+ function answerButton4 () {
+
+   document.getElementById('question-button4').onclick = function () {
+    
+   stop()   
+    alert("button pressed");  
+ 
+   }
+ }
+
+}
