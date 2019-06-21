@@ -2,7 +2,7 @@ var correctGuesses;
 var incorrectGuesses;
 var timer = 34;
 var interval_Id;
-var round = 0;
+var round = 1;
 
 // var questionOne = "<u><h1>Who attempted to assassinate Commander Adama?</h1></u>";
 // var answers = ["Lee Adama", "Caprica Six", "Sharon", "Colonel Tigh"]
@@ -20,7 +20,7 @@ var questionSet = [{
  },
   
  {
-    question3: "Which of the following is one of the final five?",
+    question3: "Which of the following is a member of the final five?",
     choices: ["Lt. Felix Gaeta", "Dr. Gauis Baltar,", "Col. Saul Tigh", "Leobon"],
     answer: 2,
 
@@ -37,11 +37,12 @@ var questionSet = [{
 
 
 
-
+gameStart()
 
 
 //Start the timer when the title button is clicked
-    $(document).ready(function(){
+    function gameStart() {
+   $(document).ready(function(){
           
           $("#title-button").click(function() {
           $("#title-button").replaceWith("<h1>" + questionSet[0].question1 + "</h1>");   
@@ -52,9 +53,13 @@ var questionSet = [{
           
           });
       });
-    
+    }
 
- 
+    $(document).ready(function() {
+       $("answer-one").click(function() {
+
+   });   
+});   
 
 function marginTop() {
    document.getElementById("game-title").style.marginTop = "150px";
@@ -75,6 +80,7 @@ function decrement () {
  if(timer === 0){
  
   stop();
+  
  } 
 }
 
@@ -82,6 +88,7 @@ function decrement () {
 function stop() {
 
   clearInterval(interval_Id);
+  
 }
 
 
@@ -92,32 +99,69 @@ function stop() {
       callNewAnswer1();
       callNewAnswer2();
       callNewAnswer3();
-      callNewAnswer4();l
+      callNewAnswer4();
 
   
      //inserts answer 1
    function callNewAnswer1 () {
+      if(round === 1) {
+       $("#answer-one").replaceWith("<h3>" + questionSet[0].choices[0] + "</h3>") 
+      }
+       else if(round === 2) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[1].choices[0] + "</h3>")
 
-      $("#answer-one").replaceWith("<h3>" + questionSet[0].choices[0] + "</h3>") 
+       }
+        else if(round === 3) {
+          $("#answer-one").replaceWith("<h3>" + questionSet[2].choices[0] + "</h3>")
+       }
+         else if(round === 4) {
+           $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[0] + "</h3>")
+
+       }
    }
       //inserts answer 2
    function callNewAnswer2 () {
-
-      $("#answer-two").replaceWith("<h3>" + questionSet[0].choices[1] + "</h3>") 
+      if(round === 1) {
+       $("#answer-two").replaceWith("<h3>" + questionSet[0].choices[1] + "</h3>") 
+      }
+       else if(round === 2) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[1].choices[1] + "</h3>")
+      }
+        else if(round === 3) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[2].choices[1] + "</h3>")
+      }
+         else if(round === 4) {
+          $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[1] + "</h3>")
+      }
    }
        //inserts answer 3
    function callNewAnswer3 () {
-
-      $("#answer-three").replaceWith("<h3>" + questionSet[0].choices[2]  + "</h3>") 
+      if(round === 1) {
+       $("#answer-three").replaceWith("<h3>" + questionSet[0].choices[2]  + "</h3>") 
+      }
+       else if(round === 2) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[1].choices[2] + "</h3>")
+      }
+        else if(round === 3) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[2].choices[2] + "</h3>")
+      }
+         else if(round === 4) {
+          $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[2] + "</h3>")
+      }
    }
       //inserts answer 4
    function callNewAnswer4 () {
-
-      $("#answer-four").replaceWith("<h3>" + questionSet[0].choices[3]  + "</h3>") 
+      if(round === 1) {
+       $("#answer-four").replaceWith("<h3>" + questionSet[0].choices[3]  + "</h3>") 
+      }
+      else if(round === 2) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[1].choices[3] + "</h3>")
+      }
+        else if(round === 3) {
+         $("#answer-one").replaceWith("<h3>" + questionSet[2].choices[3] + "</h3>")
+        }
+         else if(round === 4) {
+          $("#answer-one").replaceWith("<h3>" + questionSet[3].choices[3] + "</h3>")
+      }
    }
-
-   
-   
-}
- 
-
+ }
