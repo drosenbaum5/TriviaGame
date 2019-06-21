@@ -36,7 +36,7 @@ overflow: hidden;
     opacity: .7;
     padding: auto;
     text-align: center;
-    height: 500px;
+    height: 550px;
     border-radius: 10px;
     text-shadow: 2px;
     background-image: url(../images/cast-background.jpg);
@@ -55,8 +55,23 @@ overflow: hidden;
         margin-top: 40px;
         color: solid black;
         
+        
 
     }
+
+    h1 {
+        background:#737373;
+        opacity: .9px;
+        /* filter: alpha(opacity=90); */
+        border-radius: 10px;
+        text-shadow: 2px;
+        margin: 50px;
+        margin-top: 65px;
+        text-emphasis: white;
+        
+
+    }
+
 
     #title-button {
         margin:auto;
@@ -66,13 +81,14 @@ overflow: hidden;
 
     #timer {
         color: white;
+        background: black;
         text-align: center;
-
-        height: 35px;
+        height: 50px;
         border:50px;
         border-color: solid gray;
         border-radius: 5px;
-        margin-top: 50px;
+        margin-top: 25px;
+        
         
     }
 
@@ -84,8 +100,3 @@ overflow: hidden;
         margin-top: 20px;
     }
     
-
-    /* .question-section {
-
-       display: none;
-    } */
