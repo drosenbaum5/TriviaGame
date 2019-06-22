@@ -1,11 +1,18 @@
-var correctGuesses;
-var incorrectGuesses;
+
+//Global Variables
+var correctGuesses = 0;
+var incorrectGuesses = 0;
 var timer = 34;
 var interval_Id;
 var round = 1;
 
-// var questionOne = "<u><h1>Who attempted to assassinate Commander Adama?</h1></u>";
-// var answers = ["Lee Adama", "Caprica Six", "Sharon", "Colonel Tigh"]
+
+var images = [
+
+   'assets/images/airlock.gif',
+   'assets/good-hungting.gif',   
+
+];
 
 var questionSet = [{
 
@@ -14,7 +21,7 @@ var questionSet = [{
    answer: 2,
 }, 
  {
-    question2: "Which Battlestar did Lee Adama Captain in Season 3?",
+    question2: "Which Battlestar did Lee Adama command in Season 3?",
     choices: ["Galactica", "Pegasus,", "Atlantia", "Gemini"],
     answer: 1,
  },
@@ -40,7 +47,7 @@ var questionSet = [{
 gameStart()
 
 
-//Start the timer when the title button is clicked
+//Start the timer when the title button is clicked. Call all other necessary functions to begin game.
     function gameStart() {
    $(document).ready(function(){
           
@@ -172,6 +179,7 @@ function stop() {
  //Mother function for answer button presses
  function answerButtonPresses() {
     
+ //Nested function calls to pass data when mother function is called
     answerButton1()
     answerButton2()
     answerButton3()
@@ -186,8 +194,18 @@ function stop() {
   document.getElementById('question-button1').onclick = function () {
     
    stop()
-   alert("button pressed");  
-
+    if (round !== 4) {
+      
+      incorrectGuesses++
+      displayLossImage()
+      console.log(incorrectGuesses)
+    }
+      else{
+        
+        correctGuesses++
+        displayWinImage()
+        console.log(correctGuesses)  
+      }
   }
 }
 
@@ -196,7 +214,18 @@ function answerButton2 () {
    document.getElementById('question-button2').onclick = function () {
     
    stop() 
-    alert("button pressed");  
+    if (round !== 2) {
+      incorrectGuesses++
+      console.log("button pressed"); 
+      displayLossImage()
+
+    }
+       else {
+      correctGuesses++
+      console.log(correctGuesses)
+      displayWinImage()
+
+       }
  
    }
  }
@@ -206,7 +235,22 @@ function answerButton2 () {
    document.getElementById('question-button3').onclick = function () {
      
    stop() 
-    alert("button pressed");  
+    if (round !== 1) {
+      
+      incorrectGuesses++;
+      displayLossImage()
+      console.log("button pressed");
+      console.log(incorrectGuesses);  
+    
+   
+
+    }
+     else {
+       
+       correctGuesses++;
+       displayWinImage()
+       console.log(correctGuesses);
+     }
  
    }
  }
@@ -214,11 +258,45 @@ function answerButton2 () {
  function answerButton4 () {
 
    document.getElementById('question-button4').onclick = function () {
-    
-   stop()   
-    alert("button pressed");  
+   
+   stop() 
+    if (round !== 3) {
+
+      
+      incorrectGuesses++;
+      displayLossImage()
+      console.log(incorrectGuesses)
+     }
+
+     else {
+      
+      correctGuesses++;
+      displayWinImage()
+      console.log(correctGuesses)
+     }
+     
+    console.log("button pressed");  
  
    }
  }
 
 }
+
+
+//function for displaying image upon loss
+function displayLossImage() {
+   $("#answerbox").html("<img src='assets/images/airlock.gif'/>");
+   // setTimeout(displayImage, 4000);
+ }
+
+
+ //function for displaying image on win
+ function displayWinImage () {
+   $("#answerbox").html("<img src='assets/images/good-hunting.gif'/>");
+   // setTimeout(displayImage, 4000);
+ }
+
+
+//  function displayImage() {
+//    $('#answerbox').html('<img src=' + images[0] + " width='400px'>");
+//  }
